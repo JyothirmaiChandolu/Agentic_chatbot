@@ -1,0 +1,21 @@
+# Minimal backend requirements for Vercel deployment
+# Removed: torch, transformers, sentence-transformers, langchain (too large)
+
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.5
+pydantic-settings==2.7.1
+slowapi>=0.1.9
+python-multipart>=0.0.9
+python-dotenv==1.0.0
+
+# OpenAI
+openai>=1.10.0
+tiktoken>=0.5.2
+
+# Vector Database
+qdrant-client>=1.7.0
+
+# Basic utilities
+requests>=2.31.0
+sqlalchemy>=2.0.0
