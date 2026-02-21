@@ -1,15 +1,5 @@
 {
   "version": 2,
   "buildCommand": "npm install --prefix ./frontend && npm run --prefix ./frontend build",
-  "outputDirectory": "frontend/.next",
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/index.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/frontend/$1"
-    }
-  ]
+  "outputDirectory": "frontend/.next"
 }
