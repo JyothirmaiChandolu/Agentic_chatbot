@@ -2,12 +2,6 @@
   "version": 2,
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/.next",
-  "functions": {
-    "api/index.py": {
-      "maxDuration": 60,
-      "memory": 512
-    }
-  },
   "routes": [
     {
       "src": "/api/(.*)",
