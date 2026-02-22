@@ -4,11 +4,6 @@ FastAPI main application entry point — MHK-GPT v2 Agentic System.
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import logging
-
-# Setup logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 # Create app
 app = FastAPI(
@@ -36,14 +31,6 @@ async def health():
 @app.get("/")
 async def root():
     return {"message": "Welcome to MHK-GPT Agentic Chatbot API"}
-
-# Import and include v1 routes (with error handling)
-try:
-    from app.api.v1.router import router as v1_router
-    app.include_router(v1_router, prefix="/api/v1")
-    logger.info("✅ API v1 routes loaded successfully")
-except Exception as e:
-    logger.warning(f"⚠️ Could not load API v1 routes: {e}")
 
 if __name__ == "__main__":
     import uvicorn
