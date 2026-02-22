@@ -1,0 +1,11 @@
+backend/
+.git
+.gitignore
+README.md
+docs/
+infrastructure/
+scripts/
+data/
+venv/
+.venv
+node_modules/
